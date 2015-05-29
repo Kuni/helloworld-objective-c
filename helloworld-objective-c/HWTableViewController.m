@@ -7,10 +7,12 @@
 //
 
 #import "HWTableViewController.h"
+#import "CRFastImagePickerViewController.h"
 
 @interface HWTableViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property(nonatomic, weak)UITableView   *tableView;
+@property(nonatomic, strong)NSArray     *items;
 
 @end
 
@@ -28,7 +30,7 @@
     
     self.tableView = tableView; // 把local variable設給這個物件的property，是方便存取。
     
-    
+    self.items = @[@"image picker"];
 }
 
 
@@ -46,18 +48,13 @@
 #pragma mark - UITableViewDataSource
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 4; // 有幾個Section
+    return 1; // 有幾個Section
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // 每個Section有幾個Row
-    
-    if(section == 0) return 3;
-    if(section == 1) return 4;
-    if(section == 2) return 5;
-    
-    return 2;
+    return self.items.count;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -70,17 +67,13 @@
     }
     
     
-    cell.textLabel.text = @"Hello World";
+    NSString *item = [self.items objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = item;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld", (long)indexPath.row];
 
     
     return cell;
-}
-
-// 上面三個是資料基本的DataSource
--(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    return [NSString stringWithFormat:@"Section %d", section];
 }
 
 
@@ -88,7 +81,11 @@
 #pragma mark - UITableView Delegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Click Section = %d Row = %d", indexPath.section, indexPath.row);
+    if(indexPath.row == 0)
+    {
+        CRFastImagePickerViewController *vc = [[CRFastImagePickerViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 

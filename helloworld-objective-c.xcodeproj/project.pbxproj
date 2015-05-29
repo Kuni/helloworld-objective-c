@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F11B2A051B180E40003CA181 /* CRFastImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F11B2A041B180E40003CA181 /* CRFastImagePickerViewController.m */; };
+		F11B2A0A1B182D69003CA181 /* CRPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F11B2A091B182D69003CA181 /* CRPhotoCollectionViewCell.m */; };
 		F131C1491ABF981A0091F292 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F131C1481ABF981A0091F292 /* main.m */; };
 		F131C14C1ABF981A0091F292 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F131C14B1ABF981A0091F292 /* AppDelegate.m */; };
 		F131C14F1ABF981A0091F292 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F131C14E1ABF981A0091F292 /* ViewController.m */; };
 		F131C1541ABF981A0091F292 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F131C1531ABF981A0091F292 /* Images.xcassets */; };
 		F131C1631ABF981A0091F292 /* helloworld_objective_cTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F131C1621ABF981A0091F292 /* helloworld_objective_cTests.m */; };
 		F14A1CB81AC0FF2800E5EC08 /* HWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F14A1CB71AC0FF2800E5EC08 /* HWTableViewController.m */; };
+		F1EB8E951B0A3AE000686EBA /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EB8E941B0A3AE000686EBA /* People.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F11B2A031B180E40003CA181 /* CRFastImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRFastImagePickerViewController.h; sourceTree = "<group>"; };
+		F11B2A041B180E40003CA181 /* CRFastImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRFastImagePickerViewController.m; sourceTree = "<group>"; };
+		F11B2A081B182D69003CA181 /* CRPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		F11B2A091B182D69003CA181 /* CRPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRPhotoCollectionViewCell.m; sourceTree = "<group>"; };
 		F131C1431ABF981A0091F292 /* helloworld-objective-c.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "helloworld-objective-c.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F131C1471ABF981A0091F292 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F131C1481ABF981A0091F292 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -39,6 +46,8 @@
 		F131C1621ABF981A0091F292 /* helloworld_objective_cTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = helloworld_objective_cTests.m; sourceTree = "<group>"; };
 		F14A1CB61AC0FF2800E5EC08 /* HWTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWTableViewController.h; sourceTree = "<group>"; };
 		F14A1CB71AC0FF2800E5EC08 /* HWTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWTableViewController.m; sourceTree = "<group>"; };
+		F1EB8E931B0A3AE000686EBA /* People.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
+		F1EB8E941B0A3AE000686EBA /* People.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = People.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +68,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F11B2A061B180E4D003CA181 /* 3.FastImpagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				F11B2A071B180E61003CA181 /* views */,
+				F11B2A031B180E40003CA181 /* CRFastImagePickerViewController.h */,
+				F11B2A041B180E40003CA181 /* CRFastImagePickerViewController.m */,
+			);
+			name = 3.FastImpagePicker;
+			sourceTree = "<group>";
+		};
+		F11B2A071B180E61003CA181 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				F11B2A081B182D69003CA181 /* CRPhotoCollectionViewCell.h */,
+				F11B2A091B182D69003CA181 /* CRPhotoCollectionViewCell.m */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
 		F131C13A1ABF981A0091F292 = {
 			isa = PBXGroup;
 			children = (
@@ -80,11 +108,14 @@
 		F131C1451ABF981A0091F292 /* helloworld-objective-c */ = {
 			isa = PBXGroup;
 			children = (
+				F11B2A061B180E4D003CA181 /* 3.FastImpagePicker */,
 				F14A1CB51AC0FEE100E5EC08 /* 2.UITableViewExample */,
 				F131C14A1ABF981A0091F292 /* AppDelegate.h */,
 				F131C14B1ABF981A0091F292 /* AppDelegate.m */,
 				F131C14D1ABF981A0091F292 /* ViewController.h */,
 				F131C14E1ABF981A0091F292 /* ViewController.m */,
+				F1EB8E931B0A3AE000686EBA /* People.h */,
+				F1EB8E941B0A3AE000686EBA /* People.m */,
 				F131C1531ABF981A0091F292 /* Images.xcassets */,
 				F131C1461ABF981A0091F292 /* Supporting Files */,
 			);
@@ -225,7 +256,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F14A1CB81AC0FF2800E5EC08 /* HWTableViewController.m in Sources */,
+				F11B2A051B180E40003CA181 /* CRFastImagePickerViewController.m in Sources */,
 				F131C14F1ABF981A0091F292 /* ViewController.m in Sources */,
+				F11B2A0A1B182D69003CA181 /* CRPhotoCollectionViewCell.m in Sources */,
+				F1EB8E951B0A3AE000686EBA /* People.m in Sources */,
 				F131C14C1ABF981A0091F292 /* AppDelegate.m in Sources */,
 				F131C1491ABF981A0091F292 /* main.m in Sources */,
 			);

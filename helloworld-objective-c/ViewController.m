@@ -8,11 +8,14 @@
 
 #import "ViewController.h"
 #import "HWTableViewController.h"
-
+#import "People.h"
 
 @interface ViewController ()
 
 @property(nonatomic, weak)UIButton  *startBtn;   // 基本上只要是View，都是設weak，因為在addsubView的時候，這個view就會與parent view 有strong的連結
+@property(nonatomic, strong)People *people;
+
+
 
 @end
 
@@ -32,11 +35,18 @@
     // 3. 將reference設給weak property
     
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(10, 30, 100, 40)];
-    [button setTitle:@"Start" forState:UIControlStateNormal];
+    [button setTitle:@"Startccc" forState:UIControlStateNormal];
+    
+    UIColor *redColor = [UIColor redColor];
+    [button setTitleColor:redColor forState:UIControlStateHighlighted];
     [self.view addSubview:button];
+    
+    
+    
+    
     self.startBtn = button;
     
-    // Target-Action : 類似event的東西，在這裡就是處理點擊按鈕的部分
+    
     
     [self.startBtn addTarget:self action:@selector(helloAction:) forControlEvents:UIControlEventTouchUpInside];
     
